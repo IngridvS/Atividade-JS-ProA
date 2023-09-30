@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+</head>
+<script>
+    /* 2 - Crie uma bomba relógio (usando somente código - para deixar claro!) cuja contagem regressiva vá de 30 a 0. Utilize "document.write" para escrever em tela e no final da repetição escreva "EXPLOSÃO". */
+
+    var contagem = 30;
+    while (contagem > 0) {
+    var texto = "<p class='exemplo" + contagem + "'>Contagem em " + contagem + "<br></p>";
+    document.write(texto);
+    console.log(texto);
+    contagem = contagem - 1;}
+
+    document.write("EXPLOSÂO");
+
+</script>
+<body>
+    
+</body>
+</html>

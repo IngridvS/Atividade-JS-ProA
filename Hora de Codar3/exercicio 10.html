@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /* 10 - Escreva um programa para imprimir todas as tabuadas de 1 a N. N será informado pelo usuário. */
+    var n = parseInt(prompt("Digite um valor N para a tabuada:"));
+
+    if (n > 0) {
+        for (var multiplicando = 1; multiplicando <= n; multiplicando++) {
+            alert(`Tabuada do ${multiplicando}:`);
+            for (var multiplicador = 1; multiplicador <= 10; multiplicador++) {
+                alert(`${multiplicando} x ${multiplicador} = ${multiplicando * multiplicador}`);
+            }
+        }
+    } else {
+        alert("Por favor, insira um valor válido maior que zero.");
+    }
+
+
+</script>
+<body>
+    
+</body>
+</html>

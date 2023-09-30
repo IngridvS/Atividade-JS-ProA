@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+</head>
+<script>
+    /* 7 - Escreva um algoritmo para ler as notas de avaliações de um aluno, calcule e imprima a média (simples) desse aluno. Só devem ser aceitos valores válidos durante a leitura (0 a 10) para cada nota. São 6 notas ao total.
+    Caso o valor informado para qualquer uma das notas esteja fora do limite estabelecido, deve ser solicitado um novo valor ao usuário.  */
+
+    function calcularMedia() {
+        var somaNotas = 0;
+        var contadorNotasValidas = 0;
+
+        for (var contadorNotas = 1; contadorNotas <= 6; contadorNotas++) {
+            var nota = parseFloat(prompt("Digite a " + contadorNotas + "ª nota (0 a 10):"));
+            
+            if (!isNaN(nota) && nota >= 0 && nota <= 10) {
+                somaNotas += nota;
+                contadorNotasValidas++;
+            } else {
+                alert("Nota fora do intervalo válido. Tente novamente.");
+                contadorNotas--; // Permite ao usuário tentar novamente a mesma nota.
+            }
+        }
+
+        if (contadorNotasValidas === 6) {
+            var media = somaNotas / 6;
+            alert("A média das notas é: " + media.toFixed(2));
+        } else {
+            alert("Você não inseriu todas as notas válidas.");
+        }
+    }
+
+    calcularMedia();
+
+</script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 11 - Escreva um programa em que o usuário informe 10 valores e escreva quantos desses valores lidos estão entre os números 24 e 42 (incluindo os valores 24 e 42) e quantos deles estão fora deste intervalo. -->
+
+<script>
+    var Dentro_Intervalo = "";
+    var Fora_Intervalo = "";
+
+    for (var contador = 1; contador <= 10; contador++) {
+        var valor = parseFloat(prompt("Digite o " + contador + "º valor:"));
+
+        if (!isNaN(valor)) {
+            if (valor >= 24 && valor <= 42) {
+                if (Dentro_Intervalo !== "") {
+                    Dentro_Intervalo += ", ";
+                }
+                Dentro_Intervalo += valor;
+            } else {
+                if (Fora_Intervalo !== "") {
+                    Fora_Intervalo += ", ";
+                }
+                Fora_Intervalo += valor;
+            }
+        } else {
+            alert("Por favor, insira um valor numérico válido.");
+            contador--; 
+        }
+    }
+
+    if (Dentro_Intervalo !== "") {
+        alert("Valores dentro do intervalo [24, 42]: " + Dentro_Intervalo);
+    } else {
+        alert("Nenhum valor dentro do intervalo [24, 42] foi digitado.");
+    }
+
+    if (Fora_Intervalo !== "") {
+        alert("Valores fora do intervalo [24, 42]: " + Fora_Intervalo);
+    } else {
+        alert("Nenhum valor fora do intervalo [24, 42] foi digitado.");
+    }
+
+
+</script>
+<body>
+    
+</body>
+</html>

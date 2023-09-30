@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio</title>
+</head>
+<script>
+    /* 1 - Escreva um algoritmo para ler 2 valores informados pelo usuário e se o segundo valor informado for igual ou menor que ZERO, deve ser lido um novo valor. Ou seja, para o segundo valor não pode ser aceito o valor zero, nem um valor negativo.  O seu programa deve imprimir o resultado da divisão do primeiro valor lido pelo segundo valor. */ 
+
+    
+    var numero_1 = parseInt(prompt("Primeiro Número: "));
+    var numero_2 = parseInt(prompt("Segundo Número: "));
+
+    while (numero_2 <= 0) {
+    numero_2 = parseInt(prompt("Segundo número novamente: "));
+    } 
+
+    var resultado = numero_1 / numero_2;
+    alert("A divisão dos número é " + resultado);
+        
+</script>
+<body>
+    
+</body>
+</html>
